@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8f5ef;
+  --foreground: #26231f;
+}
+
+@theme {
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(20, 108, 96, 0.08), transparent 30rem),
+    linear-gradient(180deg, #fbf8f2 0%, var(--background) 40%, #f3ede3 100%);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  letter-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: #d8eee7;
+  color: #153f38;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(20, 108, 96, 0.35);
+  outline-offset: 3px;
+}
